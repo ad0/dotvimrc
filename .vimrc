@@ -51,21 +51,6 @@ nmap <leader>e :e <C-R>=expand("%:p:h") . '/'<CR>
 " spell checking
 map <leader>ss :setlocal spell!<cr>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Status bar
-
-set so=7
-
-set wildmenu
-set wildmode=list:longest,full
-
-" always show current position
-set ruler
-set number
-
-" status line
-set laststatus=2
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vundle
@@ -174,6 +159,27 @@ Plugin 'tpope/vim-salve'
 Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-fireplace'
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Status bar
+
+set so=7
+
+set wildmenu
+set wildmode=list:longest,full
+
+" always show current position
+set ruler
+set number
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
+" status line
+set laststatus=2
 
 
 
