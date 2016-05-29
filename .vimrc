@@ -141,6 +141,14 @@ nnoremap <leader>ht :HdevtoolsType<CR>
 nnoremap <leader>hc :HdevtoolsClear<CR>
 nnoremap <leader>hi :HdevtoolsInfo<CR>
 
+"""""""""" OCaml
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
+nnoremap <silent> <leader>t :MerlinTypeOf<CR>
+
+"""""""""" Scala
+Plugin 'derekwyatt/vim-scala'
+
 """""""""" GLSL
 Plugin 'tikhomirov/vim-glsl'
 
