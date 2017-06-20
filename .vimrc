@@ -85,6 +85,10 @@ set magic
 
 " Colors
 set t_Co=256
+if &term =~ '256color'
+  " Disable background color erase
+  set t_ut =
+endif
 if has('gui_running')
   set background=dark
 endif
